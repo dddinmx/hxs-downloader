@@ -13,7 +13,6 @@
 ![image](https://github.com/user-attachments/assets/59595f49-624e-46fe-ba86-4745d8a9c003)
 ![image](https://github.com/user-attachments/assets/a2963a1e-5ccc-4025-aa7f-967ce98acc79)
 
-
 # 📖 使用方法
 
 #### 📝 步骤
@@ -34,6 +33,9 @@ pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 ```
 python3 hxs-downloader.py
 ```
+
+# 📚 包子漫画下载器
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=dddinmx&repo=bzmh-downloader)](https://github.com/dddinmx/bzmh-downloader)
 
 # ⚠️ 免责声明
 
