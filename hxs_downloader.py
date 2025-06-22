@@ -68,7 +68,6 @@ def cepub(root_dir, output_epub, title, cover_image_path):
             img_id = f"img_{chapter_id}_{idx}"
             img_filename = f"images/{img_id}{ext}"
 
-            # 添加图片资源
             with open(image_path, 'rb') as f:
                 img_item = epub.EpubItem(
                     uid=img_id,
@@ -78,7 +77,6 @@ def cepub(root_dir, output_epub, title, cover_image_path):
                 )
             book.add_item(img_item)
 
-            # 创建 XHTML 页面显示图片
             page = epub.EpubHtml(
                 title=f"{chapter_title} - 第{idx}页",
                 file_name=f"{chapter_id}_{idx}.xhtml",
@@ -89,7 +87,6 @@ def cepub(root_dir, output_epub, title, cover_image_path):
             book.spine.append(page)
             section_pages.append(page)
 
-        # 添加章节目录
         if section_pages:
             book.toc.append((epub.Section(chapter_title), section_pages))
 
@@ -101,12 +98,10 @@ def cepub(root_dir, output_epub, title, cover_image_path):
     time.sleep(0.5)
     safe_print("✅ 成功添加章节目录")
 
-    # 添加导航
     book.add_item(epub.EpubNcx())
     book.add_item(epub.EpubNav())
     safe_print("✅ 成功添加导航")
 
-    # 写入文件
     epub.write_epub(output_epub, book)
     safe_print("✅ 写入文件")
 
