@@ -1,3 +1,4 @@
 beautifulsoup4==4.13.4
 EbookLib==0.18
 Requests==2.32.4
+tqdm==4.64.0
