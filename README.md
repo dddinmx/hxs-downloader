@@ -10,8 +10,8 @@
 
 # 🖥️ 界面
 
-![image](https://github.com/user-attachments/assets/59595f49-624e-46fe-ba86-4745d8a9c003)
-![image](https://github.com/user-attachments/assets/a2963a1e-5ccc-4025-aa7f-967ce98acc79)
+![image](https://github.com/user-attachments/assets/42649de2-20bf-4e84-ae10-9c7da09b1dbb)
+
 
 # 📖 使用方法
 
