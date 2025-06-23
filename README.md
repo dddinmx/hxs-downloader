@@ -4,7 +4,7 @@
 <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="Release" src="https://img.shields.io/badge/python-3.8%2B-8A2BE2"></a>
 <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="Release" src="https://img.shields.io/badge/Version-1.0-yellow"></a>
 
-漫小肆 mxs12.cc 漫画下载器，**免费下载收费漫画**，基于 Python3 开发，自动生成 EPUB 格式方便阅读。
+漫小肆 mxs12.cc 漫画下载器，**免费下载收费漫画**，基于 Python3 开发，多线程下载，自动生成 ZIP 导入漫画阅读器直接阅读。
 
 **如果本项目对你有帮助，欢迎点个 Star⭐ 支持！你的支持是我持续更新维护的动力🙏**
 
