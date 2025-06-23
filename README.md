@@ -20,7 +20,7 @@
 #### 1. 克隆本仓库
 
 ```
-git clone https://github.com/dddinmx/hxs-downloader.git
+git clone https://github.com/dddinmx/mxs-downloader.git
 ```
 
 #### 2.安装依赖
