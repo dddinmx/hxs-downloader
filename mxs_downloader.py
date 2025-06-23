@@ -100,9 +100,6 @@ def main():
             safe_print("✅" + " success")
 
     safe_print("\n" + green + "[+] " + reset + "「下载完成」")
-    #safe_print("\n" + green + "[+] " + reset + "开始生成EPUB...")
-    #cepub(root_dir=title, output_epub=f"{title}.epub", title=title, cover_image_path='cover.jpg')
-    #safe_print("✅ EPUB 生成成功")
     zip_path = f"{title}.zip"
     zip_downloaded_folder(title, zip_path)
     safe_print(f"✅ 已压缩为: {zip_path}")
