@@ -3,6 +3,7 @@
 <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="Release" src="https://img.shields.io/badge/crawler-bule"></a>
 <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="Release" src="https://img.shields.io/badge/python-3.8%2B-8A2BE2"></a>
 <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="Release" src="https://img.shields.io/badge/Version-1.0-yellow"></a>
+![GitHub Repo stars](https://img.shields.io/github/stars/dddinmx/mxs-downloader?color=gree) 
 
 漫小肆 mxs12.cc 漫画下载器，**免费下载收费漫画**，基于 Python3 开发，多线程下载，自动生成 ZIP 导入漫画阅读器直接阅读。
 
