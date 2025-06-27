@@ -29,12 +29,12 @@ def download_image(session, img_url, save_path, retries=3):
                             f.write(chunk)
                     return True
                 else:
-                    print(f"  图片请求失败，状态码 {response.status_code}，第{attempt+1}次重试。")
+                    print("\n"+red + "[+] " + reset+f"图片请求失败，第{attempt+1}次重试。")
         except Exception as e:
-            print(f"  图片下载异常，第{attempt+1}次重试。异常: {e}")
+            print("\n"+red + "[+] " + reset+f"图片请求失败，第{attempt+1}次重试。")
         if attempt < retries - 1:
             time.sleep(2 ** attempt)
-    print(f"  图片多次尝试失败: {os.path.basename(save_path)}")
+    print("\n"+red + "[+] " + reset+f"图片多次尝试失败: {os.path.basename(save_path)}")
     return False
 
 def download_images_concurrently(session, img_urls, save_dir, max_workers=2):
@@ -87,17 +87,23 @@ def main():
 
             safe_print("\n" + green + "[+] " + reset + save_dir)
 
-            try:
-                response = session.get(url, timeout=10, headers=headers)
-                response.raise_for_status()
-                soup = BeautifulSoup(response.text, 'html.parser')
-                img_tags = soup.find_all('img', class_='lazy')
-                img_urls = [img['data-original'] for img in img_tags if img.has_attr('data-original')]
+            for attempt in range(3):
+                try:
+                    response = session.get(url, timeout=10, headers=headers)
+                    response.raise_for_status()
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    img_tags = soup.find_all('img', class_='lazy')
+                    img_urls = [img['data-original'] for img in img_tags if img.has_attr('data-original')]
 
-                download_images_concurrently(session, img_urls, save_dir)
-            except Exception as e:
-                safe_print(f"章节访问失败: {url} 错误: {e}")
-            safe_print("✅" + " success")
+                    download_images_concurrently(session, img_urls, save_dir)
+                    print(f"\r✅ 下载成功" + " " * 20)
+                    break  # 成功则跳出循环
+                except Exception as e:
+                    if attempt < 2:
+                        time.sleep(2 ** attempt)
+                        print("\n"+red + "[+] " + reset +f"重试 {attempt + 1}/3：{save_dir} 请求失败，重试中...")
+                    else:
+                        print("\n"+red + "[+] " + reset + "章节请求超时")
 
     safe_print("\n" + green + "[+] " + reset + "「下载完成」")
     zip_path = f"{title}.zip"
