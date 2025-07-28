@@ -47,3 +47,7 @@ python3 hxs-downloader.py
 # 💬 其他
 
 任何使用中遇到的问题、任何希望添加的功能，都欢迎提交issue或开discussion交流，我会尽力解决  
+
+# 🌟 Star
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dddinmx/mxs-downloader&type=Date)](https://www.star-history.com/#dddinmx/mxs-downloader&Date)
