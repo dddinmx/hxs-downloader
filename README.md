@@ -1,5 +1,5 @@
 # 📚 漫小肆韓漫下载器
- ![Head diagram](https://github.com/user-attachments/assets/ca10deb8-d999-4df7-bdc9-42151afff633)
+![Head diagram](https://github.com/user-attachments/assets/d0356bb2-788c-4fe3-9085-71181b82331e)
 <p align="center">
   <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="crawler" src="https://img.shields.io/badge/crawler-bule"></a>
   <a href="https://github.com/dddinmx/hxs-downloader/"><img alt="python" src="https://img.shields.io/badge/python-3.8%2B-8A2BE2"></a>
